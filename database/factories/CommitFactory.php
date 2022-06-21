@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Commit;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,14 @@ class CommitFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Commit::class;
+    
     public function definition()
     {
         return [
-            //
+            'body'=>[],
+            'user_id'=> 1,
+            'post_id'=>1,
         ];
     }
 }
